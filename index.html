@@ -13,11 +13,15 @@
 <body class="blue-grey darken-3" 
 onresize="textHeightAdjust('presentation-card', 'presentation-text', '150px'), 
 textHeightAdjust('project-1', 'project-image-1', '150px'), 
-textHeightAdjust('project-2', 'project-image-2', '150px')" 
+textHeightAdjust('project-2', 'project-image-2', '150px'),
+textHeightAdjust('project-3', 'project-image-3', '150px'),
+positionMarkerAdjust('projects')"
 onload="textHeightAdjust('presentation-card', 'presentation-text', '150px'),
 textHeightAdjust('project-1', 'project-image-1', '150px'), 
-textHeightAdjust('project-2', 'project-image-2', '150px')">
-  <nav class="undernav blue-grey position-fixed-top">
+textHeightAdjust('project-2', 'project-image-2', '150px'),
+textHeightAdjust('project-3', 'project-image-3', '150px'),
+positionMarkerAdjust('projects')">
+  <nav id="navbar" class="undernav blue-grey position-fixed-top">
     <nav>
       <div class="nav-wrapper">
         <a class="brand-logo" onclick="scrollUp()"><img src="img/MD-logo.svg"></a>
@@ -60,58 +64,107 @@ textHeightAdjust('project-2', 'project-image-2', '150px')">
       </div>
     </div>
   </div>
-  <div id="projects" class="blue-grey lighten-4">
-    <div class="container">
-      <div class="row">
-        <div id="project-1" class="col s12 m6">
-          <h3>Mock Minecraft Server Website</h3>
-          <p class="flow-text">I made this website trying to apply everything I learned
-            during the time I was learning HTML and CSS. I started learning on january
-            of 2020, after three weeks of copying various websites, I came up with
-            one of my own to test my skills.</p>
-          <p class="flow-text">You can click <a href="https://raw.githack.com/MiguelDP4/capstone-html-css/developing/index.html">here</a> to take a look.</p>
-        </div>
-        <div id="project-image-1" class="col s12 m6">
-          <a target="_blank" href="https://raw.githack.com/MiguelDP4/capstone-html-css/developing/index.html">
-            <img src="img/yinyang-server.png" class="demo-screenshot">
-          </a>
+  <div class="blue-grey lighten-4">
+    <div id="projects"></div>
+    <div class="blue-grey lighten-4">
+      <div class="container">
+        <div class="row">
+          <div id="project-1" class="col s12 m6">
+            <h3>Mock Minecraft Server Website</h3>
+            <p class="flow-text">I made this website trying to apply everything I learned
+              during the time I was learning HTML and CSS. I started learning on january
+              of 2020, after three weeks of copying various websites, I came up with
+              one of my own to test my skills.</p>
+            <p class="flow-text">You can click <a href="https://raw.githack.com/MiguelDP4/capstone-html-css/developing/index.html">here</a> to take a look.</p>
+          </div>
+          <div id="project-image-1" class="col s12 m6">
+            <div class="h-100 valign-wrapper">
+              <a target="_blank" href="https://raw.githack.com/MiguelDP4/capstone-html-css/developing/index.html">
+                <img src="img/yinyang-server.png" class="demo-screenshot">
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div id="project-image-2" class="col s12 m6">
-          <a target="_blank" href="http://rollodex.herokuapp.com/">
-            <img src="img/rollodex-screenshot.png" class="demo-screenshot">
-          </a>
+    </div>
+    <div class="blue-grey darken-3">
+      <div class="container">
+        <div class="row">
+          <div id="project-image-2" class="col s12 m6">
+            <div class="h-100 valign-wrapper">
+              <a target="_blank" href="http://rollodex.herokuapp.com/">
+                <img src="img/rollodex-screenshot.png" class="demo-screenshot">
+              </a>
+            </div>
+          </div>
+          <div id="project-2" class="col s12 m6 blue-grey-text text-lighten-4">
+            <h3>Twitter-like Web Application. Rollodex</h3>
+            <p class="flow-text">After learning the Ruby syntax, I started learning Ruby on Rails.
+              It was hard at first, I never knew of the model view controller paradigm before so it
+              took me a couple of months to get the hang of the framework. I made this project because
+              I fell behind on my coding studies and had to do this side project to catch up on
+              my knowledge. You can publish micro-posts and make them either private or public.
+            </p>
+            <p class="flow-text">I wanted to practice association so I introduced friendships to the mix and made 
+              it so that only people you had added as friends would be able to see your posts. Because 
+              I don't have money to spend on an image hosting service, I used gravatar as the source 
+              for the user profile pictures.
+            </p>
+            <p class="flow-text">You can click <a href="http://rollodex.herokuapp.com/">here</a> to take a look.</p>
+          </div>
         </div>
-        <div id="project-2" class="col s12 m6">
-          <h3>Twitter-like Web Application. Rollodex</h3>
-          <p class="flow-text">After learning the Ruby syntax, I started learning Ruby on Rails.
-            It was hard at first, I never knew of the model view controller paradigm before so it
-            took me a couple of months to get the hang of the framework. I made this project because
-            I fell behind on my coding studies and had to do this side project to catch up on
-            my knowledge. You can publish micro-posts and make them either private or public.
-          </p>
-          <p class="flow-text">I wanted to practice association so I introduced friendships to the mix and made 
-            it so that only people you had added as friends would be able to see your posts. Because 
-            I don't have money to spend on an image hosting service, I used gravatar as the source 
-            for the user profile pictures.
-          </p>
-          <p class="flow-text">You can click <a href="http://rollodex.herokuapp.com/">here</a> to take a look.</p>
+      </div>
+    </div>
+    <div class="blue-grey lighten-4">
+      <div class="container">
+        <div class="row">
+          <div id="project-3" class="col s12 m6">
+            <h3>Real Articles - An article publishing website</h3>
+            <p class="flow-text">This is my ruby on rails capstone project, a finishing project 
+              showcasing what I have learned in the last weeks for ruby on rails. The project 
+              requirements were to be able to create users, create articles and publish them. 
+              Users can then vote for other people's articles, and the most popular article would
+              be showcased on the home page.
+            </p>
+            <p class="flow-text">
+              The articles are organized on categories, and the user can select the article category
+              he or she wants to read from. 
+            </p>
+            <p class="flow-text">You can click <a href="https://real-articles-demo.herokuapp.com/">here</a> to take a look.</p>
+          </div>
+          <div id="project-image-3" class="col s12 m6">
+            <div class="h-100 valign-wrapper">
+              <a target="_blank" href="https://real-articles-demo.herokuapp.com/">
+                <img src="img/real-articles-screenshot.png" class="demo-screenshot">
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-    
-  <div id="contact-me"></div>
-  <footer>
-
-  </footer>
+  <div id="contact-me" class="center-align blue-grey darken-3 blue-grey-text text-lighten-4">
+    <h5>Contact me on any of my platforms</h5>
+    <ul class="flexbox flex-row justify-content-evenly font-30 my-0">
+      <li><a class="fa fa-linkedin-square transition-link-light" href="https://www.linkedin.com/in/miguel-angel-dubois"></a></li>
+      <li><a class="fa fa-github-square transition-link-light" href="https://github.com/migueldp4" ></a></li>
+      <li><a class="fa fa-twitter-square transition-link-light" href="https://twitter.com/Mike_DP4" ></a></li>
+    </ul>
+    <p>Or you can email me at migueldp@gmail.com</p>
+  </div>
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="style/js/bin/materialize.min.js"></script>
   <script>
     function scrollUp() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
+    }
+
+    function positionMarkerAdjust(markerElementID){
+      var navBar = document.getElementById('navbar');
+      var marker = document.getElementById(markerElementID);
+      marker.style.position = 'relative';
+      marker.style.top = "-" + window.getComputedStyle(navBar).getPropertyValue('height');
     }
 
     function textHeightAdjust(elementID, copyHeightElementID, alternateHeight){
