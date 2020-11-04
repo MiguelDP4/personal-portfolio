@@ -12,6 +12,10 @@ $main-text-color: #0f0f0f;
   display: flex;
 }
 
+.padding-r-60 {
+  padding-right: 60px;
+}
+
 .bold-1 {
   font-weight: 500;
 }
@@ -89,14 +93,20 @@ $main-text-color: #0f0f0f;
         flex: 1;
       }
       .stack-info-container {
+        .stack-info-container-row {
+          width: 100%;
+          display: flex;
+          flex: 1;
+        }
         .stack-image {
           height: 45px;
           flex: 1;
+          padding: 5px;
         }
         width: 100%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
         flex: 1;
       }
@@ -134,6 +144,31 @@ $main-text-color: #0f0f0f;
   flex: 1;
   z-index: 0;
 }
+@media only screen and (min-width: 1900px) {
+  .my-info {
+    .my-info-container{
+      min-height: 600px;
+      max-height: 800px;
+      .basic-info-container {
+        font-size: 1.5em;
+      }
+      .other-info-container {
+        font-size: 5em;
+        .network-info-container {
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+        .stack-info-container {
+          .stack-info-container-row {
+            .stack-image {
+              height: 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 1100px) {
   .App {
@@ -156,16 +191,18 @@ $main-text-color: #0f0f0f;
   }
 }
 
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 518px) {
   .my-info {
     .my-info-container{
       min-width: 0;
       .other-info-container {
         .stack-info-container {
-          justify-content: start;
-          flex-wrap: wrap;
-          .stack-image {
-            margin: 25px;
+          .stack-info-container-row{
+            justify-content: start;
+            flex-wrap: wrap;
+            .stack-image {
+              margin: 25px;
+            }
           }
         }
       }
@@ -173,18 +210,33 @@ $main-text-color: #0f0f0f;
   }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 360px) {
   .my-info {
     .my-info-container{
       min-width: 0;
+      max-height: 900px;
+      .basic-info-container {
+        font-size: 0.8em;
+      }
       .other-info-container {
-        .stack-info-container {
+          font-size: 1.8em;
+          .stack-info-container {
           justify-content: start;
           flex-wrap: wrap;
           .stack-image {
             margin: 0;
           }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .my-info {
+    .my-info-container{
+      .basic-info-container {
+        font-size: 0.62em;
       }
     }
   }

@@ -1,9 +1,12 @@
 import React from 'react';
 import picture from '../img/Mike.jpg';
+import htmlLogo from '../img/html-logo.svg';
+import cssLogo from '../img/css-logo.svg';
 import rubyLogo from '../img/ruby-logo.svg';
 import railsLogo from '../img/rails-logo.svg';
 import reactLogo from '../img/react-logo.svg';
 import reduxLogo from '../img/redux-logo.svg';
+import jsLogo from '../img/js-logo.svg';
 
 const MyInfo = props => {
 
@@ -24,10 +27,17 @@ const MyInfo = props => {
             <a className="fa fa-twitter-square" href="https://twitter.com/Mike_DP4"></a>
           </div>
           <div className="stack-info-container">
-            <img className="stack-image" src={rubyLogo}></img>
-            <img className="stack-image" src={railsLogo}></img>
-            <img className="stack-image" src={reactLogo}></img>
-            <img className="stack-image" src={reduxLogo}></img>
+            <div className="stack-info-container-row">
+              <img className="stack-image" src={htmlLogo}></img>
+              <img className="stack-image" src={cssLogo}></img>
+              <img className="stack-image" src={jsLogo}></img>
+            </div>
+            <div className="stack-info-container-row">
+              <img className="stack-image" src={rubyLogo}></img>
+              <img className="stack-image" src={railsLogo}></img>
+              <img className="stack-image" src={reactLogo}></img>
+              <img className="stack-image" src={reduxLogo}></img>
+            </div>
           </div>
         </div>
       </div>
