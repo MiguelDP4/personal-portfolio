@@ -9,3 +9,5 @@ const Project = props => {
     </div>
   );
 }
+
+export default Project;
