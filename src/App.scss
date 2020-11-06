@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+$main-font: 'Quicksand', sans-serif;
+$background-color-info: #2a577c;
+$background-color-projects: #576879;
+$main-text-color: #0f0f0f;
+
+.App {
+  font-family: $main-font;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.padding-r-60 {
+  padding-right: 60px;
+}
+
+.bold-1 {
+  font-weight: 500;
+}
+
+.bold-2 {
+  font-weight: 600;
+}
+
+.paper-shadow-1 {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.paper-shadow-2 {
+  -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+}
+
+.paper-shadow-3 {
+  -webkit-box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+}
+
+.paper-shadow-4 {
+  -webkit-box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2);
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2);
+}
+
+.paper-shadow-5 {
+  -webkit-box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+}
+
+.padding-y-s {
+  padding: 1%;
+}
+
+.padding-y-m {
+  padding: 3%;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.font-size-2 {
+  font-size: 1.08em;
+}
+
+.my-info {
+  h1 {
+    font-size: 48px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 8vh;
+  }
+  .my-info-container, .my-info-container-hidden {
+    .basic-info-container {
+      img {
+        width: 25%;
+        height: auto;
+      }
+      .basic-info {
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        line-height: 1.5em;
+      }
+      display: flex;
+      width: 100%;
+      height: auto;
+      color: $main-text-color;
+      align-items: center;
+    }
+    .other-info-container {
+      .network-info-container {
+        a {
+          color: $background-color-info;
+          transition: color 0.5s;
+          &:hover {
+            color: $background-color-projects;
+          }
+        }
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex: 1;
+      }
+      .stack-info-container {
+        .stack-info-container-row {
+          width: 100%;
+          display: flex;
+          flex: 1;
+        }
+        .stack-image {
+          height: 45px;
+          flex: 1;
+          padding: 5px;
+        }
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+      }
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 3em;
+      text-decoration: none;
+    }
+    .info-card-toggle {
+      button {
+        border: none;
+        background-color: transparent;
+        color: $background-color-info;
+        transition: 0.5s;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+          color: $background-color-projects;
+        }
+      }
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 3.5%;
+    padding-bottom: 0.5%;
+    width: 70%;
+    min-width: 500px;
+    height: 30vh;
+    min-height: 400px;
+    max-height: 600px;
+  }
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color-info;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.projects-container {
+  background-color: $background-color-projects;
+  height: 100%;
+  flex: 1;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .project-switcher-left, .project-switcher-right {
+    font-size: 3em;
+    button {
+      background-color: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.3);
+      transition: 0.3s;
+      outline: none;
+      &:hover {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+  .project-square {
+    .project {
+      background-color: white;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      .project-screenshot {
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+        img {
+          width: 125%;
+          height: auto;
+        }
+      }
+      .project-description {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 8px;
+        flex: 1;
+        h2 {
+          font-weight: 600;
+          font-size: 1.4em;
+          line-height: 1.8em;
+        }
+        p {
+          font-size: 1.4em;
+        }
+      }
+      .project-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        a {
+          color: #fafafa;
+          text-decoration: none;
+          background-color: $background-color-info;
+          padding: 2%;
+          border-radius: 5px;
+          text-align: center;
+          &:hover {
+            color: $background-color-info;
+          }
+          i {
+            padding-right: 8px;
+          }
+        }
+      }
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .my-info {
+    .my-info-container{
+      min-height: 700px;
+      max-height: 800px;
+      max-width: 1600px;
+      height: 40vh;
+      .basic-info-container {
+        font-size: 1.5em;
+      }
+      .other-info-container {
+        font-size: 5em;
+        .network-info-container {
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+        .stack-info-container {
+          .stack-info-container-row {
+            .stack-image {
+              height: 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .my-info {
+    .my-info-container {
+      .other-info-container {
+        .network-info-container {
+          a {
+            padding: 25px;
+          }
+        }
+      }
+      width: 100%;
+      height: 100%;
+      background-color: #f1f1f1;
+    }
+    height: 100vh;
+  }
+
+  .projects-container {
+    height: 100vh;
+    .project {
+      max-height: 95vh;
+    }
+  }
+  .project-links {
+    flex-wrap: wrap;
+    a {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 518px) {
+  .my-info {
+    .my-info-container{
+      min-width: 0;
+      .other-info-container {
+        .stack-info-container {
+          .stack-info-container-row{
+            justify-content: start;
+            flex-wrap: wrap;
+            .stack-image {
+              margin: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .projects-container {
+    .project-square {
+      .project {
+        width: 80%;
+        .project-description {
+          p {
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .my-info {
+    .my-info-container{
+      min-width: 0;
+      max-height: 900px;
+      .basic-info-container {
+        font-size: 0.8em;
+      }
+      .other-info-container {
+          font-size: 1.8em;
+          .stack-info-container {
+          justify-content: start;
+          flex-wrap: wrap;
+          .stack-image {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  .projects-container {
+    .project-square {
+      .project {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .my-info {
+    .my-info-container{
+      .basic-info-container {
+        font-size: 0.62em;
+      }
+    }
+  }
+}
