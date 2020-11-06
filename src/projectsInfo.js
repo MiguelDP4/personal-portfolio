@@ -10,8 +10,8 @@ const projects = [
     description: "Mountain Climber is a platform game inspired by the 80s games of this genre. Players climb through five levels of increasing difficulty until they reach the flag. Built with JavaScript and Phaser3.",
     screenshot: towerClimberScreenshot,
     index: 0,
-    repo: "https://github.com/MiguelDP4/catalogue-statistics",
-    demo: "http://micro-dex.herokuapp.com/",
+    repo: "https://github.com/MiguelDP4/js-tower-climber",
+    demo: "http://mountain-climber.herokuapp.com/",
   },
   {
     title: "Micro-Dex",
