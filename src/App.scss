@@ -370,11 +370,12 @@ $main-text-color: #0f0f0f;
         font-size: 0.8em;
       }
       .other-info-container {
-          font-size: 1.8em;
+          font-size: 3.5em;
           .stack-info-container {
           justify-content: start;
           flex-wrap: wrap;
           .stack-image {
+            height: 45px;
             margin: 0;
           }
         }
@@ -391,10 +392,14 @@ $main-text-color: #0f0f0f;
 }
 
 @media only screen and (max-width: 290px) {
+  
   .my-info {
     .my-info-container{
       .basic-info-container {
         font-size: 0.62em;
+      }
+      .other-info-container {
+        font-size: 2.8em;
       }
     }
   }
