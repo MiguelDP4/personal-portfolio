@@ -13,7 +13,7 @@ const BasicInfo = props => {
   const { toggleInfo, classes } = props;
   return (
     <Rotate top left>
-      <div id='basic-info' className="my-info-container">
+      <div id='basic-info' className="my-info-container paper-shadow-2">
           <div className="basic-info-container">
             <img src={picture}  alt="mugshot"></img>
             <div className="basic-info">

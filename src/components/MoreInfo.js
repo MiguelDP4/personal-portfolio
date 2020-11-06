@@ -6,7 +6,7 @@ const MoreInfo = props => {
   const { toggleInfo } = props;
   return (
     <Rotate top left>
-      <div id='more-info' className="my-info-container">
+      <div id='more-info' className="my-info-container paper-shadow-2">
         <div className="basic-info-container">
           <img src={picture}  alt="mugshot"></img>
           <div className="basic-info">

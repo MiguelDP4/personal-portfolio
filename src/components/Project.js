@@ -16,10 +16,12 @@ const Project = props => {
           <p>{projectInfo.description}</p>
         </div>
         <div className="project-links">
-          <a className="fa fa-github-square" href={projectInfo.repo} target="_blank">
+          <a href={projectInfo.repo} target="_blank">
+            <i className="fa fa-github-square"> </i>
             Check the repository
           </a>
-          <a className="fa fa-window-restore" href={projectInfo.demo} target="_blank">
+          <a href={projectInfo.demo} target="_blank">
+            <i className="fa fa-window-restore"></i>
             Check the live demo
           </a>
         </div>
