@@ -49,6 +49,34 @@ $main-text-color: #0f0f0f;
   box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
 }
 
+.padding-y-s {
+  padding: 1%;
+}
+
+.padding-y-m {
+  padding: 3%;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.font-size-2 {
+  font-size: 1.08em;
+}
+
 .my-info {
   h1 {
     font-size: 48px;
@@ -160,6 +188,77 @@ $main-text-color: #0f0f0f;
   height: 100%;
   flex: 1;
   z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .project-switcher-left, .project-switcher-right {
+    font-size: 3em;
+    button {
+      background-color: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.3);
+      transition: 0.3s;
+      outline: none;
+      &:hover {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+  .project-square {
+    .project {
+      background-color: white;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      .project-screenshot {
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+        img {
+          width: 125%;
+          height: auto;
+        }
+      }
+      .project-description {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 8px;
+        flex: 1;
+        h2 {
+          font-weight: 600;
+          font-size: 1.4em;
+          line-height: 1.8em;
+        }
+        p {
+          font-size: 1.4em;
+        }
+      }
+      .project-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        a {
+          color: #fafafa;
+          text-decoration: none;
+          background-color: $background-color-info;
+          padding: 2%;
+          border-radius: 5px;
+          &:hover {
+            color: $background-color-info;
+          }
+        }
+      }
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+  }
 }
 
 @media only screen and (min-width: 1900px) {

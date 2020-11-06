@@ -3,11 +3,14 @@ import BasicInfo from './BasicInfo';
 import MoreInfo from './MoreInfo';
 
 const MyInfo = props => {
-  const { toggleInfo, infoClasses, otherInfoClasses } = props
+  const { toggleInfo, infoSquare } = props
   return (
     <div className="my-info paper-shadow-3">
-      <BasicInfo toggleInfo={toggleInfo} classes={infoClasses} />
-      <MoreInfo toggleInfo={toggleInfo} classes={otherInfoClasses} />
+        { infoSquare === "basic-info" ? (
+          <BasicInfo toggleInfo={toggleInfo} />
+        ) : (
+          <MoreInfo toggleInfo={toggleInfo} />
+        )}
     </div>
   );
 };

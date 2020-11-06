@@ -2,50 +2,61 @@ import React from 'react';
 import './App.scss';
 import MyInfo from './components/MyInfo';
 import MyProjects from './components/MyProjects';
+import projectsInfo from './projectsInfo';
 
 class App extends React.Component {
   constructor () {
     super();
     this.state = {
-      infoClasses: "my-info-container paper-shadow-2",
-      otherInfoClasses: "my-info-container-hidden paper-shadow-2",
+      infoSquare: "basic-info",
       project: 0,
     }
 
     this.toggleInfo = this.toggleInfo.bind(this);
+    this.projectPlus = this.projectPlus.bind(this);
+    this.projectMinus = this.projectMinus.bind(this);
   }
 
   toggleInfo() {
-    const { infoClasses, otherInfoClasses } = this.state;
-    if(infoClasses === "my-info-container paper-shadow-2") {
+    const { infoSquare } = this.state;
+    if(infoSquare === "basic-info") {
       this.setState({
-        infoClasses: "my-info-container-hidden paper-shadow-2",
+        infoSquare: "other-info",
       });
     } else {
       this.setState({
-        infoClasses: "my-info-container paper-shadow-2",
+        infoSquare: "basic-info",
       });
     }
+  }
 
-    if(otherInfoClasses === "my-info-container paper-shadow-2") {
-      this.setState({
-        otherInfoClasses: "my-info-container-hidden paper-shadow-2",
-      });
+  projectPlus() {
+    const { project } = this.state;
+    if(project < projectsInfo.length - 1) {
+      this.setState({project: project + 1,});
     } else {
-      this.setState({
-        otherInfoClasses: "my-info-container paper-shadow-2",
-      });
-    }  
+      this.setState({project: 0,});
+    }
+  }
+
+  projectMinus() {
+    const { project } = this.state;
+    if(project > 0) {
+      this.setState({project: project - 1,});
+    } else {
+      this.setState({project: projectsInfo.length - 1,});
+    }
   }
 
   render() {
-    const { infoClasses, otherInfoClasses } = this.state;
+    const { infoSquare, project } = this.state;
     return (
       <div className="App">
-        <MyInfo toggleInfo={this.toggleInfo} 
-        infoClasses={infoClasses} 
-        otherInfoClasses={otherInfoClasses} />
-        <MyProjects />
+        <MyInfo toggleInfo={this.toggleInfo} infoSquare={infoSquare} />
+        <MyProjects projects={projectsInfo}
+                    projectIndex={project}
+                    nextProject={this.projectPlus}
+                    previousProject={this.projectMinus} />
       </div>
     );
   }
