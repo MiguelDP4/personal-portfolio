@@ -191,7 +191,8 @@ $main-text-color: #0f0f0f;
   display: flex;
   justify-content: center;
   align-items: center;
-  .project-switcher-left, .project-switcher-right {
+  overflow: auto;
+    .project-switcher-left, .project-switcher-right {
     font-size: 3em;
     button {
       background-color: transparent;
@@ -315,6 +316,7 @@ $main-text-color: #0f0f0f;
   }
 
   .projects-container {
+    overflow: unset;
     height: 100vh;
     .project {
       max-height: 95vh;
