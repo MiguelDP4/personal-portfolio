@@ -10,7 +10,7 @@ import jsLogo from '../img/js-logo.svg';
 import Rotate from 'react-reveal/Rotate';
 
 const BasicInfo = props => {
-  const { toggleInfo, classes } = props;
+  const { toggleInfo } = props;
   return (
     <Rotate top left>
       <div id='basic-info' className="my-info-container paper-shadow-2">
@@ -23,9 +23,18 @@ const BasicInfo = props => {
           </div>
           <div className="other-info-container">
             <div className="network-info-container">
-              <a className="fa fa-linkedin-square" href="https://www.linkedin.com/in/miguel-angel-dubois" target="_blank"> </a>
-              <a className="fa fa-github-square" href="https://github.com/migueldp4" target="_blank"> </a>
-              <a className="fa fa-twitter-square" href="https://twitter.com/Mike_DP4" target="_blank"> </a>
+              <a className="fa fa-linkedin-square"
+                 href="https://www.linkedin.com/in/miguel-angel-dubois"
+                 target="_blank"
+                 rel="noopener noreferrer"> </a>
+              <a className="fa fa-github-square"
+              href="https://github.com/migueldp4"
+              target="_blank"
+              rel="noopener noreferrer"> </a>
+              <a className="fa fa-twitter-square"
+                 href="https://twitter.com/Mike_DP4"
+                 target="_blank"
+                 rel="noopener noreferrer"> </a>
             </div>
             <div className="stack-info-container">
               <div className="stack-info-container-row">
